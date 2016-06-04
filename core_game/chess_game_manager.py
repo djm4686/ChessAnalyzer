@@ -1,5 +1,6 @@
 import pygame
 import board
+import overlay
 from locals import *
 
 
@@ -7,6 +8,7 @@ class ChessGameManager(object):
 
     def __init__(self, width, height):
         self.game_board = board.Board(height)
+        self.overlay = overlay.Overlay(height)
         self.turn = WHITE
         self.selected_piece = None
 
@@ -19,3 +21,4 @@ class ChessGameManager(object):
 
     def draw(self, surface):
         self.game_board.draw(surface)
+        self.overlay.draw(surface)

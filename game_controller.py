@@ -28,7 +28,7 @@ class GameController(object):
         self.game_manager.update()
 
     def draw(self):
-        self.surface.fill((128, 128, 128))
+        self.surface.fill((0,0,0))
         self.game_manager.draw(self.surface)
         pygame.display.update()
 
